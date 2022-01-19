@@ -1,9 +1,11 @@
 import '../styles/App.css';
+//Components
+import UserCard from '../components/UserCard';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hey! cooooold</h1>
+      <UserCard />
     </div>
   );
 };
