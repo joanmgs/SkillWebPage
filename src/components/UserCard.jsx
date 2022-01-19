@@ -2,10 +2,10 @@
 //import components
 import Loader from "./Loader";
 import Error from "./Error";
+import Skills from "./Skills";
 //import hooks
 import useFetchTorreUser from "../hooks/useFetchTorreUser";
 //import styles
-
 import "../styles/UserCard.css";
 
 // user harcoded
@@ -29,7 +29,9 @@ export default function UserCard() {
         <img className="profile-picture" src={person.picture} alt="Profile" />
         <h2>{person.name}</h2>
         <div>
-          <h3>Skill and interests:</h3>
+          {strengths ? 
+            <Skills strengths={ strengths }/>
+          : ""}
         </div>
       </>
     );
