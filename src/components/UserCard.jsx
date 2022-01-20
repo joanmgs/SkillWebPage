@@ -1,4 +1,3 @@
-//@ts-nocheck
 //import components
 import Loader from "./Loader";
 import Error from "./Error";
