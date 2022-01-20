@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBiking, faRunning, faWalking, faMale, faGrinStars } from '@fortawesome/free-solid-svg-icons';
 //styles
 import '../styles/Skills.css';
+import Proficiency from './Proficiency';
 
 export default function Skills({ strengths }) {
   // Icons
@@ -25,35 +26,12 @@ export default function Skills({ strengths }) {
     <section className='skills-container'>
       <h3>Skill and interests:</h3>
 
-      {/* Master */}
-      {skills.master.length > 0 && <div className='skill-section'>
-        { skills.master.length > 0 && <h4><i>{masterIcon}</i>Master</h4> }
-        { skills.master.length > 0 && <ul>{ skills.master.map( ({ name }, index) => <li key={index}>{ name }</li>) }</ul> }
-      </div>}
+      <Proficiency proficiencyArray={skills.master} proficiencyName={"Master"} icon={masterIcon} />
+      <Proficiency proficiencyArray={skills.expert} proficiencyName={"Expert"} icon={expertIcon} />
+      <Proficiency proficiencyArray={skills.proficient} proficiencyName={"Proficient"} icon={proficientIcon} />
+      <Proficiency proficiencyArray={skills.novice} proficiencyName={"Novice"} icon={noviceIcon} />
+      <Proficiency proficiencyArray={skills.noExperience} proficiencyName={"No experience, but interested"} icon={noExperienceIcon} />
 
-      {/* Expert */}
-      {skills.expert.length > 0 && <div className='skill-section'>
-        { skills.expert.length > 0 && <h4><i>{expertIcon}</i>Expert</h4> }
-        { skills.expert.length > 0 && <ul>{ skills.expert.map( ({ name }, index) => <li key={index}>{ name }</li>) }</ul> }
-      </div>}
-
-      {/* Proficient */}
-      {skills.proficient.length > 0 && <div className='skill-section'>
-        { skills.proficient.length > 0 && <h4><i>{proficientIcon}</i>Proficient</h4> }
-        { skills.proficient.length > 0 && <ul>{ skills.proficient.map( ({ name }, index) => <li key={index}>{ name }</li>) }</ul> }
-      </div>}
-
-      {/* Novice */}
-      {skills.novice.length > 0 && <div className='skill-section'>
-        { skills.novice.length > 0 && <h4><i>{noviceIcon}</i>Novice</h4> }
-        { skills.novice.length > 0 && <ul>{ skills.novice.map( ({ name }, index) => <li key={index}>{ name }</li>) }</ul> }
-      </div>}
-
-      {/* No Experience, but interested */}
-      {skills.noExperience.length > 0 && <div className='skill-section'>
-        { skills.noExperience.length > 0 && <h4><i>{noExperienceIcon}</i>No experience, but interested</h4> }
-        { skills.noExperience.length > 0 && <ul>{ skills.noExperience.map( ({ name }, index) => <li key={index}>{ name }</li>) }</ul> }
-      </div>}
     </section>
   </>
   );
