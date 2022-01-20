@@ -25,15 +25,13 @@ export default function UserCard() {
     return <Loader />;
   } else if (person) {
     return (
-      <>
+    <>
+      <section className="user-container">
         <img className="profile-picture" src={person.picture} alt="Profile" />
         <h2>{person.name}</h2>
-        <div>
-          {strengths ? 
-            <Skills strengths={ strengths }/>
-          : ""}
-        </div>
-      </>
+      </section>
+      {strengths ? <Skills strengths={ strengths }/> : ""}
+    </>
     );
   }
 }

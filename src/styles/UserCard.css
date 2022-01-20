@@ -1,5 +1,13 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile-picture {
-    width: 200px;
-    height: 200px;
+    height: 170px;
+    margin-top: 40px;
     border-radius: 10px;
+    background-clip: padding-box;
+    border: 8px solid rgba(255, 255, 255, 0.219);
 }

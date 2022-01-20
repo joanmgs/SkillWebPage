@@ -1,0 +1,25 @@
+.skills-container {
+    margin: 0 40px;
+}
+.skill-section h4 i {
+    margin-right: 10px;
+}
+.skill-section ul {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.skill-section ul li {
+    list-style: none;
+    height: 1.5em;
+    padding: 0 8px;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-skill);
+}

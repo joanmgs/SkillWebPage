@@ -1,8 +1,19 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;400;900&display=swap');
+
+:root {
+  --background-page: #1F1919;
+  --background-skill: #4b4646;
+  --text-color: white;
+  --text-font: 'Lato', sans-serif;
+}
 
 body {
   margin: 0;
   border: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--background-page);
+  color: var(--text-color);
+  font-family: var(--text-font);
 }
