@@ -23,3 +23,7 @@
     align-items: center;
     background-color: var(--background-skill);
 }
+.skill-section ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
