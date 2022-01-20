@@ -1,24 +1,28 @@
 //@ts-nocheck
 import { useLocation } from "react-router-dom";
 import iconForSkills from "../helper/iconForSkills";
+//Library
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
+//Styles
+import '../styles/SkillDetail.css';
 
 export default function SkillDetail() {
   const { state: { data, proficiencyName, icon } } = useLocation();
+  const exit = <FontAwesomeIcon icon={faTimes} />;
 
   return (
     <>
-      <h1>{data.name}</h1>
-      <section>
+      <header className="header-details">
+        <i><Link to='/'>{exit}</Link></i>
+        <h2>{data.name}</h2>
+      </header>
+      <section className="detail-info">
         <p>Proficiency: <i>{iconForSkills(icon)}</i>{proficiencyName}</p>
-        <p>Recommendations: {data.recommendations}</p>
+        <p>Recommendations: <span>{data.recommendations}</span></p>
       </section>
       <hr />
-      {/* <section>
-        <p>{}'s related experiences:</p>
-        <h4>{}</h4>
-        <p>{}</p>
-      </section>
-      <hr /> */}
     </>
   );
 }

@@ -1,0 +1,25 @@
+.header-details {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 5px 0px rgba(51, 47, 47, 0.534);
+    padding: 0 40px;
+}
+.header-details i {
+    font-size: 25px;
+    margin-right: 30px;
+}
+.header-details i a {
+    color: white;
+    text-decoration: none;
+}
+.detail-info p {
+    margin-left: 30px;
+}
+.detail-info p i {
+    margin: 0 8px 0 30px;
+}
+.detail-info p span {
+    color: yellowgreen;
+    margin-left: 30px;
+    font-size: 1.5em;
+}
