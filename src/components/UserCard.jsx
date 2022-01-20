@@ -21,7 +21,7 @@ export default function UserCard() {
 
   if (isError) {
     return <Error />;
-  } else if (!person || !strengths || !loading) {
+  } else if (loading) {
     return <Loader />;
   } else if (person) {
     return (
@@ -33,5 +33,7 @@ export default function UserCard() {
       {strengths ? <Skills strengths={ strengths }/> : ""}
     </>
     );
+  } else {
+    return <h1 style={{ textAlign: "center" }}>Nothing found</h1>;
   }
 }

@@ -8,6 +8,5 @@
     height: 170px;
     margin-top: 40px;
     border-radius: 10px;
-    background-clip: padding-box;
     border: 8px solid rgba(255, 255, 255, 0.219);
 }

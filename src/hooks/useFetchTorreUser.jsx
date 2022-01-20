@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 
 const getUser = async (user = "") => {
-  
   const res = await fetch(`https://torre.bio/api/bios/${user}`);
   const data = await res.json();
-  return data
+  return data;
 };
 
 export default function useFetchTorreUser(user = "") {
@@ -20,11 +19,12 @@ export default function useFetchTorreUser(user = "") {
       (async function setFinalState() {
         setState({
           data: await getUser(user),
-          loading: true,
+          loading: false,
           isError: false,
         });
       })();
     } catch (error) {
+      console.log(error);
       setState({
         data: [],
         loading: true,
