@@ -9,7 +9,7 @@ import useFetchTorreUser from "../hooks/useFetchTorreUser";
 import "../styles/UserCard.css";
 
 // user harcoded
-// TODO: allow user search instead hardcoded, manage res.ok === false (it is, the user doesn't exist)
+// TODO: allow user search instead hardcoded
 const username = "joangs";
 
 export default function UserCard() {
