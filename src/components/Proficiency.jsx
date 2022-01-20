@@ -1,5 +1,6 @@
 //Libraries
 import { Link } from 'react-router-dom';
+import iconForSkills from '../helper/iconForSkills';
 
 export default function Proficiency({
   proficiencyArray,
@@ -12,15 +13,22 @@ export default function Proficiency({
         <div className="skill-section">
           {proficiencyArray.length > 0 && (
             <h4>
-              <i>{icon}</i>
+              <i>{iconForSkills(icon)}</i>
               {proficiencyName}
             </h4>
           )}
           {proficiencyArray.length > 0 && (
             <ul>
-              {proficiencyArray.map(({ name }, index) => (
+              {proficiencyArray.map((item, index) => (
                 <li key={index} >
-                  <Link to="/skilldetail" >{name}</Link>
+                  <Link 
+                    to="/skilldetail" 
+                    state={{ 
+                      data: item, 
+                      proficiencyName, 
+                      icon,
+                    }}
+                  >{item.name}</Link>
                 </li>
               ))}
             </ul>
